@@ -14,7 +14,7 @@ export default function Copyright({ className }: { className?: string }) {
                         <div>CSTR：12166.11.ds.2024.0003 </div>
                     </>
                 }>
-                    <span>数据来源：中国地震台网中心预警速报部</span>
+                    <span className='cursor-pointer'>数据来源：中国地震台网中心预警速报部</span>
                 </Tooltip>
             </TooltipProvider>
             <br />

@@ -1,16 +1,26 @@
 import { useEffect, useRef, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import axios from 'axios'
-import { Button, Container, Select } from '@medusajs/ui'
-import { ArrowPath, CubeSolid } from '@medusajs/icons'
+import { Button, Drawer, Select, Toaster, toast } from '@medusajs/ui'
+import { ArrowPath, CubeSolid, Folder } from '@medusajs/icons'
 import intColor from './resources/intColor'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import Copyright from './components/copyright'
 import Earthquake from './components/earthquake'
+import Draggable from './components/draggable'
+import File from './pages/file'
+import { saveXls } from './lib/utils'
 
 export default function App() {
     let map = useRef<maplibregl.Map | null>(null), bounds = useRef<maplibregl.LngLatBounds>(new maplibregl.LngLatBounds())
     const [data, setData] = useState<any[]>([])
+    const [isDragging, setIsDragging] = useState(false)
+    const [isFileDrawerOpen, setIsFileDrawerOpen] = useState(false)
+    const [selectedId, setSelectedId] = useState<string | null>(null)
+    const [elArray] = useState<HTMLElement[]>([])
+    const [markerArray] = useState<maplibregl.Marker[]>([])
+
+    const fileRef = useRef<{ loadFiles: () => void }>(null)
 
     const fitChinaMainlandBounds = (animate: boolean) => {
         map.current?.fitBounds(
@@ -133,7 +143,7 @@ export default function App() {
                 layout: {
                     'text-field': ['get', 'name'],
                     'text-font': ['Roboto Regular'],
-                    'text-size': 12,
+                    'text-size': 10,
 
                 },
                 paint: {
@@ -151,7 +161,7 @@ export default function App() {
                 layout: {
                     'text-field': ['get', 'name'],
                     'text-font': ['Roboto Regular'],
-                    'text-size': 14,
+                    'text-size': 12,
                 },
                 paint: {
                     'text-color': '#000000',
@@ -195,20 +205,62 @@ export default function App() {
         })
     }
 
-    const loadData = async () => {
-        const data = (await axios.get('./resources/data.json')).data
-        setData(data)
+    const loadData = (_data: any) => {
+        setData(_data)
     }
 
     useEffect(() => {
+        if (data.length) {
+            displayData(data[0].earthquake.id)
+        }
+    }, [data])
+
+    useEffect(() => {
         initMap()
-        loadData()
+
+        const dragover = (e: DragEvent) => {
+            e.preventDefault()
+            setIsDragging(true)
+        }
+
+        const dragleave = () => {
+            setIsDragging(false)
+        }
+
+        const drop = (e: DragEvent) => {
+            e.preventDefault()
+            setIsDragging(false);
+
+            Array.from(e.dataTransfer?.items || []).forEach(item => {
+                if (item.kind === 'file') {
+                    const file = item.getAsFile()
+
+                    if (file?.type !== 'application/vnd.ms-excel') {
+                        toast.error('错误', {
+                            description: '请导入正确的 xls 文件'
+                        })
+                        return
+                    }
+
+                    const reader = new FileReader()
+                    reader.onload = async () => {
+                        const arrayBuffer = reader.result as ArrayBuffer
+                        saveXls(arrayBuffer)
+                        fileRef.current?.loadFiles()
+                    }
+                    reader.readAsArrayBuffer(file)
+                }
+            })
+        }
+
+        document.addEventListener('dragover', dragover)
+        document.addEventListener('dragleave', dragleave)
+        document.addEventListener('drop', drop)
     }, [])
 
-    const elArray = [] as HTMLElement[]
-    const markerArray = [] as maplibregl.Marker[]
-
     const displayData = (id: string) => {
+        setSelectedId(id)
+
         elArray.forEach(el => el.remove())
         markerArray.forEach(marker => marker.remove())
 
@@ -270,13 +322,13 @@ export default function App() {
         <>
             <div id='map' className='h-screen bg-gray-50 dark:bg-[#242424]'></div>
 
-            <div className='absolute top-0 left-0 p-3 z-50'>
-                <Select onValueChange={displayData}>
-                    <Select.Trigger className='h-auto p-0 z-50 shadow-none select-trigger'>
-                        <Select.Value placeholder={<div className='flex items-center p-3'>请选择<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none' className='text-ui-fg-muted group-disabled/trigger:text-ui-fg-disabled ml-2' aria-hidden='true'><path fill='currentColor' d='M4.91 5.75c-.163 0-.323-.037-.464-.108a.85.85 0 0 1-.334-.293A.7.7 0 0 1 4 4.952a.7.7 0 0 1 .142-.39l2.59-3.454c.082-.11.195-.2.33-.263a1.04 1.04 0 0 1 .876 0 .9.9 0 0 1 .33.263l2.59 3.455a.7.7 0 0 1 .141.39.7.7 0 0 1-.111.396.85.85 0 0 1-.335.293c-.14.07-.3.108-.464.108zM10.09 9.25c.163 0 .323.037.463.108.14.07.256.172.335.293a.7.7 0 0 1 .111.397.7.7 0 0 1-.141.39l-2.59 3.454a.9.9 0 0 1-.33.263 1.04 1.04 0 0 1-.876 0 .9.9 0 0 1-.33-.263l-2.59-3.455a.7.7 0 0 1-.142-.39.7.7 0 0 1 .112-.396.85.85 0 0 1 .335-.293c.14-.07.3-.108.463-.108z'></path></svg></div>}></Select.Value>
+            <div className='absolute top-0 left-0 p-3 z-20'>
+                <Select onValueChange={displayData} value={selectedId as string}>
+                    <Select.Trigger className='h-auto p-0 z-20 shadow-none select-trigger'>
+                        <Select.Value placeholder=''></Select.Value>
                     </Select.Trigger>
 
-                    <Select.Content className='z-50'>
+                    <Select.Content className='z-20'>
                         {data.map(item => (
                             <Select.Item key={item.earthquake.id} value={item.earthquake.id} className='select-container'>
                                 <Earthquake item={item} />
@@ -286,10 +338,24 @@ export default function App() {
                 </Select>
             </div>
 
-            <div className='absolute top-0 right-0 p-3 flex gap-3 flex-col z-50'>
+            <div className='absolute top-0 right-0 p-3 flex gap-2 flex-col z-20'>
+                <Drawer open={isFileDrawerOpen} onOpenChange={setIsFileDrawerOpen}>
+                    <Drawer.Trigger asChild>
+                        <Button variant='secondary' onClick={() => setIsFileDrawerOpen(true)}>
+                            <Folder />
+                            文件
+                        </Button>
+                    </Drawer.Trigger>
+
+                    <Drawer.Content className='z-40 !max-w-[50vw]'>
+                        <File ref={fileRef} onClose={() => setIsFileDrawerOpen(false)} loadData={loadData} />
+                    </Drawer.Content>
+                </Drawer>
+
+
                 <Button variant='secondary' onClick={refresh}>
                     <ArrowPath />
-                    刷新
+                    重载
                 </Button>
 
                 <Button variant='secondary' onClick={fitBounds}>
@@ -298,7 +364,11 @@ export default function App() {
                 </Button>
             </div>
 
-            <Copyright className='absolute z-50 bottom-0 right-0 m-3' />
+            <Copyright className='absolute z-20 bottom-0 right-0 m-3' />
+
+            {isDragging && <Draggable />}
+
+            <Toaster className='z-50' position='top-center' />
         </>
     )
 }

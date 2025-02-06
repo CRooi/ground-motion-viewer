@@ -68,6 +68,10 @@ body {
   display: none !important;
 }
 
+.bg-ui-bg-overlay {
+  z-index: 40;
+}
+
 .maplibregl-ctrl-attrib {
   display: none !important;
 }
