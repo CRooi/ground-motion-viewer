@@ -1,0 +1,1186 @@
+[
+    {
+        "earthquake": {
+            "id": "20250127173336.00",
+            "time": "2025-01-27 17:33:36",
+            "hypocenter": {
+                "name": "西藏日喀则市定日县",
+                "location": {
+                    "latitude": 28.55,
+                    "longitude": 87.42,
+                    "depth": 10
+                }
+            },
+            "magnitude": 4.1
+        },
+        "stations": [
+            {
+                "station": {
+                    "code": "XZ",
+                    "id": "D0004",
+                    "name": "D0004",
+                    "location": {
+                        "latitude": 28.37,
+                        "longitude": 87.78,
+                        "distance": 40,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.1,
+                    "vs30": 231.007141,
+                    "pgaE": 3.08842015,
+                    "pgaN": 4.07468224,
+                    "pgaZ": 2.48729134,
+                    "pgvE": 0.19783877,
+                    "pgvN": 0.20896675,
+                    "pgvZ": 0.13136961
+                }
+            },
+            {
+                "station": {
+                    "code": "XZ",
+                    "id": "ZHF",
+                    "name": "珠峰台",
+                    "location": {
+                        "latitude": 28.36,
+                        "longitude": 86.94,
+                        "distance": 51,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 2.9,
+                    "vs30": 900,
+                    "pgaE": 7.07785845,
+                    "pgaN": 5.07436848,
+                    "pgaZ": 3.7740666899999997,
+                    "pgvE": 0.31006249,
+                    "pgvN": 0.25656015,
+                    "pgvZ": 0.20613833
+                }
+            }
+        ]
+    },
+    {
+        "earthquake": {
+            "id": "20250125162326.00",
+            "time": "2025-01-25 16:23:26",
+            "hypocenter": {
+                "name": "四川乐山市井研县",
+                "location": {
+                    "latitude": 29.53,
+                    "longitude": 104.04,
+                    "depth": 10
+                }
+            },
+            "magnitude": 4.1
+        },
+        "stations": [
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "ZQ001",
+                    "name": "ZQ001",
+                    "location": {
+                        "latitude": 29.84,
+                        "longitude": 103.87,
+                        "distance": 38,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.2,
+                    "vs30": 381.819031,
+                    "pgaE": 4.7183609,
+                    "pgaN": 5.5744810099999995,
+                    "pgaZ": 2.07918239,
+                    "pgvE": 0.10130244,
+                    "pgvN": 0.09542823,
+                    "pgvZ": 0.03348752
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2108",
+                    "name": "Z2108",
+                    "location": {
+                        "latitude": 29.9,
+                        "longitude": 104.14,
+                        "distance": 42,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.1,
+                    "vs30": 285.950562,
+                    "pgaE": 3.5674448,
+                    "pgaN": 2.18712234,
+                    "pgaZ": 1.24108267,
+                    "pgvE": 0.1146092,
+                    "pgvN": 0.07763011,
+                    "pgvZ": 0.0378996
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "JYDL",
+                    "name": "JYDL",
+                    "location": {
+                        "latitude": 29.61,
+                        "longitude": 104.16,
+                        "distance": 14,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 4.7,
+                    "vs30": 347.79718,
+                    "pgaE": 22.73480415,
+                    "pgaN": 27.34731102,
+                    "pgaZ": 6.4509244,
+                    "pgvE": 0.55819725,
+                    "pgvN": 0.71264777,
+                    "pgvZ": 0.2106785
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Q2104",
+                    "name": "Q2104",
+                    "location": {
+                        "latitude": 29.17,
+                        "longitude": 104.29,
+                        "distance": 46,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.9,
+                    "vs30": 316.446136,
+                    "pgaE": 4.31619072,
+                    "pgaN": 1.08682656,
+                    "pgaZ": 2.79877472,
+                    "pgvE": 0.16568048,
+                    "pgvN": 0.03545175,
+                    "pgvZ": 0.08030414
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "C2104",
+                    "name": "C2104",
+                    "location": {
+                        "latitude": 29.36,
+                        "longitude": 104.26,
+                        "distance": 28,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.8,
+                    "vs30": 316.197144,
+                    "pgaE": 10.59432602,
+                    "pgaN": 5.14233017,
+                    "pgaZ": 2.34389496,
+                    "pgvE": 0.25049041,
+                    "pgvN": 0.20093955,
+                    "pgvZ": 0.05839678
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2109",
+                    "name": "Z2109",
+                    "location": {
+                        "latitude": 29.92,
+                        "longitude": 104.4,
+                        "distance": 55,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.3,
+                    "vs30": 341.611176,
+                    "pgaE": 3.14713717,
+                    "pgaN": 4.60013151,
+                    "pgaZ": 1.3834472899999999,
+                    "pgvE": 0.06723004,
+                    "pgvN": 0.10094699,
+                    "pgvZ": 0.03397489
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L0203",
+                    "name": "L0203",
+                    "location": {
+                        "latitude": 29.63,
+                        "longitude": 103.71,
+                        "distance": 33,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 3,
+                    "vs30": 336.715759,
+                    "pgaE": 7.53153419,
+                    "pgaN": 8.36181736,
+                    "pgaZ": 4.87227726,
+                    "pgvE": 0.29555139,
+                    "pgvN": 0.4829963,
+                    "pgvZ": 0.14275497
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L1104",
+                    "name": "L1104",
+                    "location": {
+                        "latitude": 29.39,
+                        "longitude": 103.67,
+                        "distance": 39,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.9,
+                    "vs30": 524.566528,
+                    "pgaE": 3.24381733,
+                    "pgaN": 4.54802227,
+                    "pgaZ": 1.97818923,
+                    "pgvE": 0.10346186,
+                    "pgvN": 0.17608538,
+                    "pgvZ": 0.05275572
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L0202",
+                    "name": "L0202",
+                    "location": {
+                        "latitude": 29.53,
+                        "longitude": 103.58,
+                        "distance": 44,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.5,
+                    "vs30": 285.861145,
+                    "pgaE": 13.303718570000001,
+                    "pgaN": 8.2378912,
+                    "pgaZ": 4.57735205,
+                    "pgvE": 0.18531064,
+                    "pgvN": 0.16936994,
+                    "pgvZ": 0.06357552
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2304",
+                    "name": "L2304",
+                    "location": {
+                        "latitude": 29.35,
+                        "longitude": 104.1,
+                        "distance": 20,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 3.1,
+                    "vs30": 499.821136,
+                    "pgaE": 10.24662495,
+                    "pgaN": 8.04407215,
+                    "pgaZ": 4.27152681,
+                    "pgvE": 0.44622403,
+                    "pgvN": 0.19236049,
+                    "pgvZ": 0.07554489
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "LJ001",
+                    "name": "LJ001",
+                    "location": {
+                        "latitude": 29.73,
+                        "longitude": 103.59,
+                        "distance": 48,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.7,
+                    "vs30": 234.449478,
+                    "pgaE": 3.5256815,
+                    "pgaN": 5.37385941,
+                    "pgaZ": 1.4519014399999999,
+                    "pgvE": 0.07897084,
+                    "pgvN": 0.14290145,
+                    "pgvZ": 0.02650467
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "C2103",
+                    "name": "C2103",
+                    "location": {
+                        "latitude": 29.31,
+                        "longitude": 104.22,
+                        "distance": 29,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.8,
+                    "vs30": 296.947968,
+                    "pgaE": 3.62441826,
+                    "pgaN": 5.08322239,
+                    "pgaZ": 0,
+                    "pgvE": 0.08218453,
+                    "pgvN": 0.14774945,
+                    "pgvZ": 0
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2105",
+                    "name": "Z2105",
+                    "location": {
+                        "latitude": 30.01,
+                        "longitude": 104.25,
+                        "distance": 56,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.6,
+                    "vs30": 333.565552,
+                    "pgaE": 4.60307741,
+                    "pgaN": 4.59370708,
+                    "pgaZ": 2.46958852,
+                    "pgvE": 0.15000027,
+                    "pgvN": 0.08345839,
+                    "pgvZ": 0.03123761
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "LQ001",
+                    "name": "LQ001",
+                    "location": {
+                        "latitude": 29.2,
+                        "longitude": 103.94,
+                        "distance": 37,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.1,
+                    "vs30": 315.825653,
+                    "pgaE": 4.5654764199999995,
+                    "pgaN": 3.63330245,
+                    "pgaZ": 1.57414055,
+                    "pgvE": 0.07180747,
+                    "pgvN": 0.07724448,
+                    "pgvZ": 0.03495347
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L1101",
+                    "name": "L1101",
+                    "location": {
+                        "latitude": 29.32,
+                        "longitude": 103.68,
+                        "distance": 41,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.8,
+                    "vs30": 482.443115,
+                    "pgaE": 2.56250381,
+                    "pgaN": 3.19762683,
+                    "pgaZ": 3.01645899,
+                    "pgvE": 0.12901075,
+                    "pgvN": 0.14280705,
+                    "pgvZ": 0.04923032
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2401",
+                    "name": "L2401",
+                    "location": {
+                        "latitude": 29.54,
+                        "longitude": 104.14,
+                        "distance": 9,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 4.2,
+                    "vs30": 239.946396,
+                    "pgaE": 33.98648453,
+                    "pgaN": 27.24565506,
+                    "pgaZ": 19.30897141,
+                    "pgvE": 0.68388749,
+                    "pgvN": 0.67789856,
+                    "pgvZ": 0.373207
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2502",
+                    "name": "Z2502",
+                    "location": {
+                        "latitude": 29.89,
+                        "longitude": 103.81,
+                        "distance": 45,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.6,
+                    "vs30": 332.70929,
+                    "pgaE": 4.94270039,
+                    "pgaN": 4.13118458,
+                    "pgaZ": 2.3038826,
+                    "pgvE": 0.14957556,
+                    "pgvN": 0.11998505,
+                    "pgvZ": 0.05776158
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2302",
+                    "name": "L2302",
+                    "location": {
+                        "latitude": 29.3,
+                        "longitude": 103.91,
+                        "distance": 28,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.9,
+                    "vs30": 289.518616,
+                    "pgaE": 3.66745353,
+                    "pgaN": 3.93164968,
+                    "pgaZ": 2.21578836,
+                    "pgvE": 0.19823551,
+                    "pgvN": 0.136086,
+                    "pgvZ": 0.11229799
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "ZD001",
+                    "name": "ZD001",
+                    "location": {
+                        "latitude": 29.93,
+                        "longitude": 103.74,
+                        "distance": 52,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.5,
+                    "vs30": 293.832703,
+                    "pgaE": 3.74716663,
+                    "pgaN": 3.4977026,
+                    "pgaZ": 1.99938619,
+                    "pgvE": 0.14283978,
+                    "pgvN": 0.11184494,
+                    "pgvZ": 0.03814219
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "RSBD",
+                    "name": "RSBD",
+                    "location": {
+                        "latitude": 29.99,
+                        "longitude": 104.44,
+                        "distance": 64,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 1.9,
+                    "vs30": 275.997253,
+                    "pgaE": 1.6157462599999999,
+                    "pgaN": 2.14634323,
+                    "pgaZ": 1.27762341,
+                    "pgvE": 0.09103226,
+                    "pgvN": 0.11694422,
+                    "pgvZ": 0.03495447
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2503",
+                    "name": "Z2503",
+                    "location": {
+                        "latitude": 29.76,
+                        "longitude": 103.82,
+                        "distance": 33,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 3.5,
+                    "vs30": 369.230225,
+                    "pgaE": 9.52925396,
+                    "pgaN": 14.03220367,
+                    "pgaZ": 4.86838055,
+                    "pgvE": 0.36577713,
+                    "pgvN": 0.55742111,
+                    "pgvZ": 0.09360612
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2501",
+                    "name": "Z2501",
+                    "location": {
+                        "latitude": 29.87,
+                        "longitude": 103.95,
+                        "distance": 38,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.2,
+                    "vs30": 371.134308,
+                    "pgaE": 7.85018396,
+                    "pgaN": 7.44491053,
+                    "pgaZ": 3.71130133,
+                    "pgvE": 0.16290197,
+                    "pgvN": 0.14744624,
+                    "pgvZ": 0.04933094
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2602",
+                    "name": "L2602",
+                    "location": {
+                        "latitude": 29.8,
+                        "longitude": 103.71,
+                        "distance": 43,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.7,
+                    "vs30": 228.632095,
+                    "pgaE": 2.75332379,
+                    "pgaN": 5.89156151,
+                    "pgaZ": 1.55922568,
+                    "pgvE": 0.06349888,
+                    "pgvN": 0.12390686,
+                    "pgvZ": 0.03048224
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "LS001",
+                    "name": "LS001",
+                    "location": {
+                        "latitude": 29.68,
+                        "longitude": 103.95,
+                        "distance": 18,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.5,
+                    "vs30": 296.268066,
+                    "pgaE": 9.92946815,
+                    "pgaN": 7.8622045499999995,
+                    "pgaZ": 4.5763917,
+                    "pgvE": 0.19912254,
+                    "pgvN": 0.13215283,
+                    "pgvZ": 0.05745289
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "K2402",
+                    "name": "K2402",
+                    "location": {
+                        "latitude": 29.74,
+                        "longitude": 104.48,
+                        "distance": 48,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.5,
+                    "vs30": 376.279663,
+                    "pgaE": 5.96652174,
+                    "pgaN": 7.58805513,
+                    "pgaZ": 2.47202682,
+                    "pgvE": 0.15335963,
+                    "pgvN": 0.24652361,
+                    "pgvZ": 0.07260528
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2101",
+                    "name": "Z2101",
+                    "location": {
+                        "latitude": 29.78,
+                        "longitude": 104.13,
+                        "distance": 29,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 3,
+                    "vs30": 237.550323,
+                    "pgaE": 3.95483613,
+                    "pgaN": 7.84492779,
+                    "pgaZ": 2.2226212,
+                    "pgvE": 0.16256092,
+                    "pgvN": 0.432296,
+                    "pgvZ": 0.07063209
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2603",
+                    "name": "L2603",
+                    "location": {
+                        "latitude": 29.91,
+                        "longitude": 103.65,
+                        "distance": 56,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.3,
+                    "vs30": 306.3815,
+                    "pgaE": 4.77514887,
+                    "pgaN": 2.60137367,
+                    "pgaZ": 2.24836922,
+                    "pgvE": 0.33381305,
+                    "pgvN": 0.12323724,
+                    "pgvZ": 0.08199649
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2305",
+                    "name": "L2305",
+                    "location": {
+                        "latitude": 29.28,
+                        "longitude": 103.82,
+                        "distance": 34,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.8,
+                    "vs30": 305.255737,
+                    "pgaE": 6.15762615,
+                    "pgaN": 6.76227856,
+                    "pgaZ": 3.58463383,
+                    "pgvE": 0.23618369,
+                    "pgvN": 0.31828539,
+                    "pgvZ": 0.24322369
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "C2102",
+                    "name": "C2102",
+                    "location": {
+                        "latitude": 29.38,
+                        "longitude": 104.43,
+                        "distance": 41,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.2,
+                    "vs30": 294.620148,
+                    "pgaE": 3.56690431,
+                    "pgaN": 4.13945103,
+                    "pgaZ": 0.81208479,
+                    "pgvE": 0.14484632,
+                    "pgvN": 0.1950881,
+                    "pgvZ": 0.05764166
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "LY001",
+                    "name": "LY001",
+                    "location": {
+                        "latitude": 29.53,
+                        "longitude": 104,
+                        "distance": 3,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 6.2,
+                    "vs30": 247.367294,
+                    "pgaE": 162.2253418,
+                    "pgaN": 102.98958588,
+                    "pgaZ": 45.24454498,
+                    "pgvE": 2.30606723,
+                    "pgvN": 3.70997295,
+                    "pgvZ": 0.67044659
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2307",
+                    "name": "L2307",
+                    "location": {
+                        "latitude": 29.12,
+                        "longitude": 104.02,
+                        "distance": 45,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.1,
+                    "vs30": 349.89566,
+                    "pgaE": 3.13883305,
+                    "pgaN": 4.39616108,
+                    "pgaZ": 2.80402875,
+                    "pgvE": 0.07296585,
+                    "pgvN": 0.07282811,
+                    "pgvZ": 0.05074038
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L0204",
+                    "name": "L0204",
+                    "location": {
+                        "latitude": 29.65,
+                        "longitude": 103.83,
+                        "distance": 24,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 3.4,
+                    "vs30": 382.925964,
+                    "pgaE": 10.11549187,
+                    "pgaN": 9.12094975,
+                    "pgaZ": 5.33421326,
+                    "pgvE": 0.39749803,
+                    "pgvN": 0.40515474,
+                    "pgvZ": 0.13392024
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "ZR001",
+                    "name": "ZR001",
+                    "location": {
+                        "latitude": 29.99,
+                        "longitude": 104.13,
+                        "distance": 51,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.2,
+                    "vs30": 452.981049,
+                    "pgaE": 3.09329247,
+                    "pgaN": 1.8128310399999998,
+                    "pgaZ": 1.10982311,
+                    "pgvE": 0.12893492,
+                    "pgvN": 0.06887635,
+                    "pgvZ": 0.0525294
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2401",
+                    "name": "Z2401",
+                    "location": {
+                        "latitude": 29.9,
+                        "longitude": 103.55,
+                        "distance": 62,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.8,
+                    "vs30": 312.821167,
+                    "pgaE": 3.44888973,
+                    "pgaN": 4.44822454,
+                    "pgaZ": 1.37394273,
+                    "pgvE": 0.07543146,
+                    "pgvN": 0.13385041,
+                    "pgvZ": 0.05700981
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "RSSG",
+                    "name": "RSSG",
+                    "location": {
+                        "latitude": 29.72,
+                        "longitude": 104.28,
+                        "distance": 31,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 3.3,
+                    "vs30": 433.191162,
+                    "pgaE": 3.70128655,
+                    "pgaN": 11.5782032,
+                    "pgaZ": 3.85730529,
+                    "pgvE": 0.08773888,
+                    "pgvN": 0.25361993,
+                    "pgvZ": 0.05331985
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "CR001",
+                    "name": "CR001",
+                    "location": {
+                        "latitude": 29.46,
+                        "longitude": 104.43,
+                        "distance": 38,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.6,
+                    "vs30": 315.408173,
+                    "pgaE": 2.36242318,
+                    "pgaN": 4.4788403500000005,
+                    "pgaZ": 0.99277049,
+                    "pgvE": 0.06994831,
+                    "pgvN": 0.14376145,
+                    "pgvZ": 0.03109668
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2104",
+                    "name": "Z2104",
+                    "location": {
+                        "latitude": 29.87,
+                        "longitude": 104.27,
+                        "distance": 43,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.4,
+                    "vs30": 294.484833,
+                    "pgaE": 3.84916282,
+                    "pgaN": 5.4570031199999995,
+                    "pgaZ": 2.1271576899999998,
+                    "pgvE": 0.08725938,
+                    "pgvN": 0.08279981,
+                    "pgvZ": 0.04098749
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "QWLC",
+                    "name": "QWLC",
+                    "location": {
+                        "latitude": 29.37,
+                        "longitude": 104.05,
+                        "distance": 17,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 2.1,
+                    "vs30": 623.9866939999999,
+                    "pgaE": 3.38059187,
+                    "pgaN": 4.40743446,
+                    "pgaZ": 2.11049724,
+                    "pgvE": 0.13128307,
+                    "pgvN": 0.17560951,
+                    "pgvZ": 0.06353425
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2306",
+                    "name": "L2306",
+                    "location": {
+                        "latitude": 29.13,
+                        "longitude": 103.86,
+                        "distance": 47,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.4,
+                    "vs30": 435.340485,
+                    "pgaE": 1.8352600300000002,
+                    "pgaN": 2.46708035,
+                    "pgaZ": 1.04910374,
+                    "pgvE": 0.05729579,
+                    "pgvN": 0.13954418,
+                    "pgvZ": 0.05207459
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "LW001",
+                    "name": "LW001",
+                    "location": {
+                        "latitude": 29.38,
+                        "longitude": 103.8,
+                        "distance": 28,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.3,
+                    "vs30": 263.676056,
+                    "pgaE": 7.6184530299999995,
+                    "pgaN": 6.79148293,
+                    "pgaZ": 2.87728,
+                    "pgvE": 0.19828686,
+                    "pgvN": 0.16587162,
+                    "pgvZ": 0.03313418
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "K2503",
+                    "name": "K2503",
+                    "location": {
+                        "latitude": 29.82,
+                        "longitude": 104.52,
+                        "distance": 56,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.2,
+                    "vs30": 427.975189,
+                    "pgaE": 2.89629006,
+                    "pgaN": 4.07035542,
+                    "pgaZ": 0,
+                    "pgvE": 0.04412072,
+                    "pgvN": 0.08327846,
+                    "pgvZ": 0
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2303",
+                    "name": "L2303",
+                    "location": {
+                        "latitude": 29.23,
+                        "longitude": 104.11,
+                        "distance": 33,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.9,
+                    "vs30": 302.232269,
+                    "pgaE": 4.5405817,
+                    "pgaN": 10.57839298,
+                    "pgaZ": 2.72150803,
+                    "pgvE": 0.13898339,
+                    "pgvN": 0.1715785,
+                    "pgvZ": 0.04619966
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "L2301",
+                    "name": "L2301",
+                    "location": {
+                        "latitude": 29.17,
+                        "longitude": 104.13,
+                        "distance": 40,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.1,
+                    "vs30": 639.837708,
+                    "pgaE": 1.65927494,
+                    "pgaN": 3.2794559,
+                    "pgaZ": 1.4763906,
+                    "pgvE": 0.04589383,
+                    "pgvN": 0.08116937,
+                    "pgvZ": 0.03682055
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Z2103",
+                    "name": "Z2103",
+                    "location": {
+                        "latitude": 29.82,
+                        "longitude": 104.37,
+                        "distance": 45,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.6,
+                    "vs30": 505.210297,
+                    "pgaE": 3.65341616,
+                    "pgaN": 6.03913546,
+                    "pgaZ": 2.66543937,
+                    "pgvE": 0.10829683,
+                    "pgvN": 0.09145068,
+                    "pgvZ": 0.04502852
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "SZLY",
+                    "name": "SZLY",
+                    "location": {
+                        "latitude": 29.54,
+                        "longitude": 103.82,
+                        "distance": 21,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 2.3,
+                    "vs30": 277.700714,
+                    "pgaE": 6.34078503,
+                    "pgaN": 4.90248299,
+                    "pgaZ": 4.08466721,
+                    "pgvE": 0.15587123,
+                    "pgvN": 0.08391324,
+                    "pgvZ": 0.12576532
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "LC001",
+                    "name": "LC001",
+                    "location": {
+                        "latitude": 29.17,
+                        "longitude": 103.72,
+                        "distance": 50,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 2.4,
+                    "vs30": 435.977844,
+                    "pgaE": 4.87812185,
+                    "pgaN": 4.37520027,
+                    "pgaZ": 3.38718987,
+                    "pgvE": 0.21874054,
+                    "pgvN": 0.19026686,
+                    "pgvZ": 0.11052688
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "Q2106",
+                    "name": "Q2106",
+                    "location": {
+                        "latitude": 29.04,
+                        "longitude": 104.23,
+                        "distance": 57,
+                        "tag": "地表"
+                    }
+                },
+                "value": {
+                    "intensity": 1.5,
+                    "vs30": 324.043762,
+                    "pgaE": 3.3511528999999998,
+                    "pgaN": 5.47855139,
+                    "pgaZ": 1.70181,
+                    "pgvE": 0.10238391,
+                    "pgvN": 0.10609252,
+                    "pgvZ": 0.04243
+                }
+            },
+            {
+                "station": {
+                    "code": "SC",
+                    "id": "JYA",
+                    "name": "井研台",
+                    "location": {
+                        "latitude": 29.79,
+                        "longitude": 103.93,
+                        "distance": 30,
+                        "tag": "基岩"
+                    }
+                },
+                "value": {
+                    "intensity": 2.5,
+                    "vs30": 323.744141,
+                    "pgaE": 2.73552895,
+                    "pgaN": 3.8597939,
+                    "pgaZ": 2.04544902,
+                    "pgvE": 0.17394332,
+                    "pgvN": 0.2221661,
+                    "pgvZ": 0.11178357
+                }
+            }
+        ]
+    }
+]
