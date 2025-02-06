@@ -286,6 +286,8 @@ export default function App() {
 
             if (station.value.intensity < 0) {
                 station.value.intensity = 0
+            } else if (station.value.intensity > 12) {
+                station.value.intensity = 12
             }
 
             el.style.backgroundColor = intColor[Math.round(station.value.intensity)].bgcolor
