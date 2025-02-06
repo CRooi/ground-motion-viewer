@@ -2,11 +2,19 @@ import { Container } from '@medusajs/ui'
 import intColor from '../resources/intColor'
 
 export default function Earthquake({ item }: { item: any }) {
+    let maxIntensity = Math.round(Math.max(...item.stations.map((station: any) => station.value.intensity)))
+
+    if (maxIntensity < 0) {
+        maxIntensity = 0
+    } else if (maxIntensity > 12) {
+        maxIntensity = 12
+    }
+
     return (
         <Container className='flex p-1.5 items-center z-50'>
             <div className='flex gap-2 flex-1'>
-                <div className='max-intensity' style={{ backgroundColor: intColor[Math.round(Math.max(...item.stations.map((station: any) => station.value.intensity)))].bgcolor, border: `${intColor[Math.round(Math.max(...item.stations.map((station: any) => station.value.intensity)))].strokeColor} 3px solid` }}>
-                    {Math.round(Math.max(...item.stations.map((station: any) => station.value.intensity)))}
+                <div className='max-intensity' style={{ backgroundColor: intColor[maxIntensity].bgcolor, border: `${intColor[maxIntensity].strokeColor} 3px solid` }}>
+                    {maxIntensity}
                 </div>
 
                 <div className='flex flex-col justify-center items-start leading-4'>
