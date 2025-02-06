@@ -5,6 +5,7 @@ import { Button, Container, Select } from '@medusajs/ui'
 import { ArrowPath, CubeSolid } from '@medusajs/icons'
 import intColor from './resources/intColor'
 import 'maplibre-gl/dist/maplibre-gl.css'
+import Copyright from './components/copyright'
 
 export default function App() {
     let map = useRef<maplibregl.Map | null>(null), bounds = useRef<maplibregl.LngLatBounds>(new maplibregl.LngLatBounds())
@@ -308,6 +309,8 @@ export default function App() {
                     边界
                 </Button>
             </div>
+
+            <Copyright className='absolute z-50 bottom-0 right-0 m-3' />
         </>
     )
 }
