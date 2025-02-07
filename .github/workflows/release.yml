@@ -41,27 +41,18 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install Bun
-        run: |
-          if [[ "$RUNNER_OS" == "Linux" ]]; then
-            curl -fsSL https://bun.sh/install | bash
-          elif [[ "$RUNNER_OS" == "macOS" ]]; then
-            curl -fsSL https://bun.sh/install | bash
-          elif [[ "$RUNNER_OS" == "Windows" ]]; then
-            powershell -c "irm bun.sh/install.ps1|iex"
-          fi
+      - uses: oven-sh/setup-bun@v2
 
       - name: Install Rust stable
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
 
-      - name: install dependencies (ubuntu only)
-        if: matrix.platform == 'ubuntu-latest'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libwebkit2gtk-4.0-dev libappindicator3-dev libasound2-dev librsvg2-dev patchelf
+      # - name: install dependencies (ubuntu only)
+      #   if: matrix.platform == 'ubuntu-latest'
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y libwebkit2gtk-4.0-dev libappindicator3-dev libasound2-dev librsvg2-dev patchelf
 
       - name: Install app dependencies and build it
         run: bun install && bun run tauri build
