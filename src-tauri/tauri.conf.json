@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.tauri.app/config/2",
-    "productName": "ground-motion-viewer",
+    "productName": "Ground Motion Viewer",
     "version": "0.1.0",
     "identifier": "im.seis.ground-motion-viewer",
     "build": {
