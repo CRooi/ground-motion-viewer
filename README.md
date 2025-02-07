@@ -8,6 +8,9 @@ Visualizer for "DataSet of strong ground motion parameters of magnitude M4.0 and
 >
 > This project does not provide any dataset of strong ground motion parameters; all data must be imported by the user. When using this software, it is strictly prohibited to import non-official or tampered datasets. Please read and comply with 《地震科学数据共享管理办法》 ([https://data.earthquake.cn/sjgxgz/info/2016/2344.html](https://data.earthquake.cn/sjgxgz/info/2016/2344.html)).
 
+![image](https://raw.githubusercontent.com/CRooi/ground-motion-viewer/refs/heads/main/screenshots/main.png)
+![image](https://raw.githubusercontent.com/CRooi/ground-motion-viewer/refs/heads/main/screenshots/file.png)
+
 ## How To Use
 
 Before using, you need to register at the National Earthquake Data Center (https://data.earthquake.cn/).
