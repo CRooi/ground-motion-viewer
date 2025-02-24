@@ -9,6 +9,8 @@ export const parseData = (arrayBuffer: ArrayBuffer) => {
     const sheet = workbook.Sheets[sheetName]
     const data = xlsx.utils.sheet_to_json(sheet)
 
+    console.log(data)
+
     function transformData(data: any[]): any[] {
         const result: Record<string, any> = {}
 
@@ -45,8 +47,8 @@ export const parseData = (arrayBuffer: ArrayBuffer) => {
                 },
                 value: {
                     intensity: parseFloat(event.仪器烈度),
-                    maxPga: parseFloat(event.总峰值加速度),
-                    maxPgv: parseFloat(event.总峰值速度),
+                    maxPga: parseFloat(event.总峰值加速度PGA),
+                    maxPgv: parseFloat(event.总峰值速度PGV),
                     vs30: parseFloat(event.参考Vs30),
                     pgaE: parseFloat(event.东西分量PGA),
                     pgaN: parseFloat(event.南北分量PGA),
