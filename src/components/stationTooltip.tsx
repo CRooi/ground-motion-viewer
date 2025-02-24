@@ -8,7 +8,7 @@ export default function StationTooltip(props: StationTooltipProps) {
     const intensity = props.data.value.intensity < 0 ? 0 : props.data.value.intensity > 12 ? 12 : props.data.value.intensity
     const roundedIntensity = Math.round(intensity)
     const { bgcolor, strokeColor } = intColor[roundedIntensity]
-    const stationInfo = `${props.data.station.code}.${props.data.station.id}.${props.data.station.name}`
+    const stationInfo = `${props.data.station.name} (${props.data.station.code}.${props.data.station.id})`
 
     return (
         <div className='text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 rounded-md p-2 border-zinc-200 dark:border-zinc-700 border-2 shadow-sm'>
