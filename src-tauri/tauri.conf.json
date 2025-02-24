@@ -13,9 +13,11 @@
         "windows": [
             {
                 "title": "Ground Motion Viewer",
-                "width": 800,
-                "height": 600,
-                "dragDropEnabled": false
+                "width": 899,
+                "height": 553,
+                "dragDropEnabled": false,
+                "minWidth": 899,
+                "minHeight": 553
             }
         ],
         "security": {
