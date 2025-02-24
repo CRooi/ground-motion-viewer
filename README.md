@@ -2,10 +2,7 @@
 
 Visualizer for "DataSet of strong ground motion parameters of magnitude M4.0 and above earthquakes in China since 2020".
 
-> [!IMPORTANT]
->
-> ### NOTICE
->
+> [!CAUTION]
 > This project does not provide any dataset of strong ground motion parameters; all data must be imported by the user. When using this software, it is strictly prohibited to import non-official or tampered datasets. Please read and comply with 《地震科学数据共享管理办法》 ([https://data.earthquake.cn/sjgxgz/info/2016/2344.html](https://data.earthquake.cn/sjgxgz/info/2016/2344.html)).
 
 ![image](https://github.com/CRooi/ground-motion-viewer/blob/main/screenshots/main.png?raw=true)
