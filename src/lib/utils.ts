@@ -9,8 +9,6 @@ export const parseData = (arrayBuffer: ArrayBuffer) => {
     const sheet = workbook.Sheets[sheetName]
     const data = xlsx.utils.sheet_to_json(sheet)
 
-    console.log(data)
-
     function transformData(data: any[]): any[] {
         const result: Record<string, any> = {}
 
