@@ -5,7 +5,8 @@ interface StationTooltipProps {
 }
 
 export default function StationTooltip(props: StationTooltipProps) {
-    const roundedIntensity = Math.round(props.data.value.intensity)
+    const intensity = props.data.value.intensity < 0 ? 0 : props.data.value.intensity > 12 ? 12 : props.data.value.intensity
+    const roundedIntensity = Math.round(intensity)
     const { bgcolor, strokeColor } = intColor[roundedIntensity]
     const stationInfo = `${props.data.station.code}.${props.data.station.id}.${props.data.station.name}`
 

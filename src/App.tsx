@@ -283,20 +283,15 @@ export default function App() {
         bounds.current.extend([item.earthquake.hypocenter.location.longitude, item.earthquake.hypocenter.location.latitude])
 
         item.stations.forEach((station: any) => {
-
             const el = document.createElement('div')
             el.className = 'station'
 
-            if (station.value.intensity < 0) {
-                station.value.intensity = 0
-            } else if (station.value.intensity > 12) {
-                station.value.intensity = 12
-            }
+            const intensity = station.value.intensity < 0 ? 0 : station.value.intensity > 12 ? 12 : station.value.intensity
 
-            el.style.backgroundColor = intColor[Math.round(station.value.intensity)].bgcolor
-            el.style.border = `${intColor[Math.round(station.value.intensity)].strokeColor} 3px solid`
-            el.innerHTML = Math.round(station.value.intensity).toString()
-            el.style.zIndex = Math.round(station.value.intensity + 1).toString()
+            el.style.backgroundColor = intColor[Math.round(intensity)].bgcolor
+            el.style.border = `${intColor[Math.round(intensity)].strokeColor} 3px solid`
+            el.innerHTML = Math.round(intensity).toString()
+            el.style.zIndex = Math.round(intensity + 1).toString()
 
             const marker = new maplibregl.Marker({ element: el })
                 .setLngLat([station.station.location.longitude, station.station.location.latitude])
