@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import * as ReactDOM from 'react-dom/client'
 import maplibregl from 'maplibre-gl'
 import axios from 'axios'
 import { Button, Drawer, Select, Toaster, toast } from '@medusajs/ui'
@@ -10,6 +11,7 @@ import Earthquake from './components/earthquake'
 import Draggable from './components/draggable'
 import File from './pages/file'
 import { saveXls } from './lib/utils'
+import StationTooltip from './components/stationTooltip'
 
 export default function App() {
     let map = useRef<maplibregl.Map | null>(null), bounds = useRef<maplibregl.LngLatBounds>(new maplibregl.LngLatBounds())
@@ -281,6 +283,7 @@ export default function App() {
         bounds.current.extend([item.earthquake.hypocenter.location.longitude, item.earthquake.hypocenter.location.latitude])
 
         item.stations.forEach((station: any) => {
+
             const el = document.createElement('div')
             el.className = 'station'
 
@@ -299,8 +302,40 @@ export default function App() {
                 .setLngLat([station.station.location.longitude, station.station.location.latitude])
                 .addTo(map.current as maplibregl.Map)
 
+            const tooltipEl = document.createElement('div')
+            tooltipEl.style.position = 'absolute'
+            tooltipEl.style.display = 'none'
+            tooltipEl.style.zIndex = '9999'
+            tooltipEl.style.pointerEvents = 'none'
+            document.body.appendChild(tooltipEl)
+
+            const root = ReactDOM.createRoot(tooltipEl)
+            root.render(<StationTooltip data={station} />)
+
+            el.addEventListener('mouseenter', () => {
+                const markerEl = marker.getElement()
+                const rect = markerEl.getBoundingClientRect()
+                tooltipEl.style.display = 'block'
+                tooltipEl.style.left = `${rect.right + 10}px`
+                tooltipEl.style.top = `${rect.top + (rect.height - tooltipEl.offsetHeight) / 2}px`
+            })
+
+            el.addEventListener('mouseleave', () => {
+                tooltipEl.style.display = 'none'
+            })
+
+            map.current?.on('move', () => {
+                if (tooltipEl.style.display === 'block') {
+                    const markerEl = marker.getElement()
+                    const rect = markerEl.getBoundingClientRect()
+                    tooltipEl.style.left = `${rect.right + 10}px`
+                    tooltipEl.style.top = `${rect.top + (rect.height - tooltipEl.offsetHeight) / 2}px`
+                }
+            })
+
             elArray.push(el)
             markerArray.push(marker)
+            elArray.push(tooltipEl)
 
             bounds.current.extend([station.station.location.longitude, station.station.location.latitude])
         })
