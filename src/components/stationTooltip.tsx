@@ -8,10 +8,18 @@ export default function StationTooltip(props: StationTooltipProps) {
     const intensity = props.data.value.intensity < 0 ? 0 : props.data.value.intensity > 12 ? 12 : props.data.value.intensity
     const roundedIntensity = Math.round(intensity)
     const { bgcolor, strokeColor } = intColor[roundedIntensity]
-    // const stationInfo = `${props.data.station.name} (${props.data.station.code}.${props.data.station.id})`
-    const stationInfo = <div className='flex gap-1 items-center'>
-        <div>{props.data.station.name}</div>
-        <div className='opacity-50 text-xs'>{props.data.station.code}.{props.data.station.id}</div>
+    const stationLngLatInfo = <div>
+        {props.data.station.location.latitude === 0 ? '0' : props.data.station.location.latitude > 0 ? `${props.data.station.location.latitude.toFixed(2)}N` : `${props.data.station.location.latitude.toFixed(2)}S`}
+        ,
+        {props.data.station.location.longitude === 0 ? '0' : props.data.station.location.longitude > 0 ? `${props.data.station.location.longitude.toFixed(2)}E` : `${props.data.station.location.longitude.toFixed(2)}W`}
+        &nbsp;{props.data.station.location.distance}km
+    </div>
+    const stationInfo = <div className='flex gap-0.5 items-center'>
+        <div className='text-base'>{props.data.station.name}</div>
+        <div className='opacity-50 text-[.5rem] leading-[.6rem]'>
+            <div>{props.data.station.code}.{props.data.station.id} {props.data.station.location.tag}</div>
+            {stationLngLatInfo}
+        </div>
     </div>
 
     return (

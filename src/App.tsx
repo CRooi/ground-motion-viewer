@@ -297,45 +297,33 @@ export default function App() {
                 .setLngLat([station.station.location.longitude, station.station.location.latitude])
                 .addTo(map.current as maplibregl.Map)
 
-            const tooltipEl = document.createElement('div')
-            tooltipEl.style.position = 'absolute'
-            tooltipEl.style.display = 'none'
-            tooltipEl.style.zIndex = '9999'
-            tooltipEl.style.pointerEvents = 'none'
-            document.body.appendChild(tooltipEl)
+            const popup = new maplibregl.Popup({
+                closeButton: false,
+                closeOnClick: false,
+                offset: [20, 0],
+                anchor: 'left'
+            })
 
-            const root = ReactDOM.createRoot(tooltipEl)
+            const popupEl = document.createElement('div')
+            const root = ReactDOM.createRoot(popupEl)
             root.render(<StationTooltip data={station} />)
+            popup.setDOMContent(popupEl)
 
             el.addEventListener('mouseenter', () => {
                 const markerEl = marker.getElement()
                 markerEl.style.filter = 'saturate(2)'
-
-                const rect = markerEl.getBoundingClientRect()
-                tooltipEl.style.display = 'block'
-                tooltipEl.style.left = `${rect.right + 10}px`
-                tooltipEl.style.top = `${rect.top + (rect.height - tooltipEl.offsetHeight) / 2}px`
+                popup.setLngLat([station.station.location.longitude, station.station.location.latitude])
+                    .addTo(map.current as maplibregl.Map)
             })
 
             el.addEventListener('mouseleave', () => {
                 const markerEl = marker.getElement()
                 markerEl.style.filter = 'saturate(1)'
-
-                tooltipEl.style.display = 'none'
-            })
-
-            map.current?.on('move', () => {
-                if (tooltipEl.style.display === 'block') {
-                    const markerEl = marker.getElement()
-                    const rect = markerEl.getBoundingClientRect()
-                    tooltipEl.style.left = `${rect.right + 10}px`
-                    tooltipEl.style.top = `${rect.top + (rect.height - tooltipEl.offsetHeight) / 2}px`
-                }
+                popup.remove()
             })
 
             elArray.push(el)
             markerArray.push(marker)
-            elArray.push(tooltipEl)
 
             bounds.current.extend([station.station.location.longitude, station.station.location.latitude])
         })
