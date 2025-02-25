@@ -309,6 +309,8 @@ export default function App() {
 
             el.addEventListener('mouseenter', () => {
                 const markerEl = marker.getElement()
+                markerEl.style.filter = 'saturate(2)'
+
                 const rect = markerEl.getBoundingClientRect()
                 tooltipEl.style.display = 'block'
                 tooltipEl.style.left = `${rect.right + 10}px`
@@ -316,6 +318,9 @@ export default function App() {
             })
 
             el.addEventListener('mouseleave', () => {
+                const markerEl = marker.getElement()
+                markerEl.style.filter = 'saturate(1)'
+
                 tooltipEl.style.display = 'none'
             })
 
