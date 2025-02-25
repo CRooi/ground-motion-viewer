@@ -2,7 +2,7 @@ import { Container, Tooltip, TooltipProvider } from '@medusajs/ui'
 
 export default function Copyright({ className }: { className?: string }) {
     return (
-        <Container className={`cursor-default text-right inline w-auto text-xs p-2 select-none bg-opacity-20 text-ui-fg-base ${className}`}>
+        <Container className={`cursor-default text-right inline w-auto text-xs p-2 select-none bg-opacity-20 text-ui-fg-base ${className} opacity-80`}>
             <span>审图号：GS京(2022)1061号</span>
             <br />
             <TooltipProvider>
