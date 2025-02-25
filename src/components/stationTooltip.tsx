@@ -8,7 +8,11 @@ export default function StationTooltip(props: StationTooltipProps) {
     const intensity = props.data.value.intensity < 0 ? 0 : props.data.value.intensity > 12 ? 12 : props.data.value.intensity
     const roundedIntensity = Math.round(intensity)
     const { bgcolor, strokeColor } = intColor[roundedIntensity]
-    const stationInfo = `${props.data.station.name} (${props.data.station.code}.${props.data.station.id})`
+    // const stationInfo = `${props.data.station.name} (${props.data.station.code}.${props.data.station.id})`
+    const stationInfo = <div className='flex gap-1 items-center'>
+        <div>{props.data.station.name}</div>
+        <div className='opacity-50 text-xs'>{props.data.station.code}.{props.data.station.id}</div>
+    </div>
 
     return (
         <div className='text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 rounded-md p-2 border-zinc-200 dark:border-zinc-700 border-2 shadow-sm'>
@@ -22,8 +26,8 @@ export default function StationTooltip(props: StationTooltipProps) {
 
             <div className='text-sm mt-2'>
                 <div>仪器烈度: {props.data.value.intensity.toFixed(1)}</div>
-                <div>总峰值加速度: {props.data.value.maxPga}</div>
-                <div>总峰值速度: {props.data.value.maxPgv}</div>
+                <div>总峰值加速度PGA: {props.data.value.maxPga}</div>
+                <div>总峰值速度PGV: {props.data.value.maxPgv}</div>
                 <div>参考Vs30: {props.data.value.vs30}</div>
                 <div>东西分量PGA: {props.data.value.pgaE}</div>
                 <div>南北分量PGA: {props.data.value.pgaN}</div>
