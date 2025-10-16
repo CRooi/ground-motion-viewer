@@ -1390,7 +1390,7 @@ dependencies = [
 
 [[package]]
 name = "ground-motion-viewer"
-version = "0.1.0"
+version = "0.2.4"
 dependencies = [
  "serde",
  "serde_json",
