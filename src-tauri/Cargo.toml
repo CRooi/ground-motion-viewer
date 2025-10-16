@@ -1,6 +1,6 @@
 [package]
 name = "ground-motion-viewer"
-version = "0.2.4"
+version = "0.2.5"
 description = "Visualizer for \"DataSet of strong ground motion parameters of magnitude M4.0 and above earthquakes in China since 2020\"."
 authors = ["CRooi"]
 edition = "2021"
